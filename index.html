@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAJA PREDICTIONS - Official Telegram</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    body {
+      background-color: #0b0c10;
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px 16px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Logo Styling */
+    .profile-wrapper {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .profile-img {
+      width: 135px;
+      height: 135px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #70e000;
+      box-shadow: 0 0 25px rgba(112, 224, 0, 0.5), inset 0 0 15px rgba(112, 224, 0, 0.5);
+    }
+
+    /* Title & Badges */
+    .title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #ffb703;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .members-count {
+      color: #ffb703;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .owner-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: rgba(255, 183, 3, 0.1);
+      border: 1px solid rgba(255, 183, 3, 0.4);
+      border-radius: 20px;
+      color: #ffb703;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .owner-badge:hover {
+      background: rgba(255, 183, 3, 0.25);
+      transform: scale(1.03);
+    }
+
+    .pill-tags {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 22px;
+    }
+
+    .pill {
+      flex: 1;
+      padding: 8px 12px;
+      border-radius: 25px;
+      font-size: 13px;
+      font-weight: 600;
+      background: #16181f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .pill-yellow {
+      border: 1px solid rgba(255, 183, 3, 0.4);
+      color: #ffb703;
+    }
+
+    .pill-red {
+      border: 1px solid rgba(239, 35, 60, 0.4);
+      color: #ef233c;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      width: 100%;
+      margin-bottom: 22px;
+    }
+
+    .stat-card {
+      background: #14171d;
+      padding: 14px 6px;
+      border-radius: 12px;
+      border: 1px solid #222733;
+    }
+
+    .stat-value {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .stat-value.yellow { color: #ffb703; }
+    .stat-value.red { color: #ef233c; }
+
+    .stat-label {
+      font-size: 11px;
+      color: #8b949e;
+      font-weight: 500;
+    }
+
+    /* Join CTA Button */
+    .cta-btn {
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(90deg, #1b9a59 0%, #b32a2a 100%);
+      box-shadow: 0 4px 20px rgba(27, 154, 89, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      animation: pulse 2s infinite;
+      margin-bottom: 24px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+      100% { transform: scale(1); }
+    }
+
+    .cta-btn:hover {
+      box-shadow: 0 6px 24px rgba(27, 154, 89, 0.5);
+    }
+
+    /* Trust Features Grid */
+    .features-card {
+      width: 100%;
+      background: #14171d;
+      border: 1px solid #222733;
+      border-radius: 14px;
+      padding: 16px 10px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .feature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .feature-icon {
+      font-size: 18px;
+    }
+
+    .feature-item:nth-child(1) .feature-icon { color: #52b788; }
+    .feature-item:nth-child(2) .feature-icon { color: #ffb703; }
+    .feature-item:nth-child(3) .feature-icon { color: #ef233c; }
+    .feature-item:nth-child(4) .feature-icon { color: #ffb703; }
+
+    .feature-label {
+      font-size: 10.5px;
+      color: #8b949e;
+      font-weight: 500;
+    }
+
+    /* Footer & Stylish Ads Credit */
+    .footer {
+      font-size: 12px;
+      color: #6c757d;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .ads-credit-box {
+      margin-top: 10px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+      border: 1px dashed rgba(255, 183, 3, 0.35);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .ads-text {
+      color: #a0aec0;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .ads-link {
+      color: #00d2ff;
+      text-decoration: none;
+      font-weight: 700;
+      text-shadow: 0 0 8px rgba(0, 210, 255, 0.5);
+      transition: all 0.3s ease;
+      margin-left: 4px;
+    }
+
+    .ads-link:hover {
+      color: #70e000;
+      text-shadow: 0 0 10px rgba(112, 224, 0, 0.8);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Channel Profile Image -->
+    <div class="profile-wrapper">
+      <img src="https://i.postimg.cc/t4hLNQWQ/IMG-20260920-140646-959.jpg" alt="RAJA PREDICTIONS Logo" class="profile-img">
+    </div>
+
+    <!-- Title & Active Members -->
+    <h1 class="title">🏏 RAJA PREDICTIONS</h1>
+    <div class="members-count">
+      <i class="fa-solid fa-users"></i> 15K+ Active Members
+    </div>
+
+    <!-- Owner Username Link -->
+    <a href="https://t.me/RAJA_BHAIRR" target="_blank" class="owner-badge">
+      <i class="fa-solid fa-crown"></i> Owner: @RAJA
+    </a>
+
+    <!-- Highlights Pills -->
+    <div class="pill-tags">
+      <div class="pill pill-yellow">
+        <i class="fa-solid fa-trophy"></i> Elite Analyst
+      </div>
+      <div class="pill pill-red">
+        <i class="fa-solid fa-bolt"></i> Live Updates
+      </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value yellow">25,892</div>
+        <div class="stat-label">Match Tips</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value red">99%</div>
+        <div class="stat-label">Win Rate</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value yellow">4.9★</div>
+        <div class="stat-label">Rating</div>
+      </div>
+    </div>
+
+    <!-- Main Telegram Channel CTA Button -->
+    <a href="https://t.me/+Nqd7YfHMwzliOTQ1" target="_blank" class="cta-btn">
+      <i class="fa-brands fa-telegram fa-lg"></i> Join Telegram Channel
+    </a>
+
+    <!-- Trust Features -->
+    <div class="features-card">
+      <div class="feature-item">
+        <i class="fa-regular fa-circle-check feature-icon"></i>
+        <span class="feature-label">Verified</span>
+      </div>
+      <div class="feature-item">
+        <i class="fa-solid fa-lock feature-icon"></i>
+        <span class="feature-label">Secure</span>
+      </div>
+      <div class="feature-item">
+        <i class="fa-solid fa-chart-line feature-icon"></i>
+        <span class="feature-label">Profitable</span>
+      </div>
+      <div class="feature-item">
+        <i class="fa-regular fa-star feature-icon"></i>
+        <span class="feature-label">Top Rated</span>
+      </div>
+    </div>
+
+    <!-- Footer & Stylish Ads Setup Link -->
+    <div class="footer">
+      <p>© 2026 RAJA PREDICTIONS. All rights reserved.</p>
+      <p>Professional Cricket & Sports Analysis</p>
+
+      <div class="ads-credit-box">
+        <span class="ads-text">✨ Ads Setup by</span>
+        <a href="https://t.me/sahab164" target="_blank" class="ads-link">Babu Sahab ↗</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
